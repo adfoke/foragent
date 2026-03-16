@@ -39,11 +39,11 @@ npm run cf:deploy
 
 ```json
 {
-  "name": "cleanuagent",
-  "description": "给 agent 输出降噪的工具。",
-  "tags": ["Text Cleaning", "CLI", "Local Skill"],
+  "name": "talkless",
+  "description": "让 AI 输出更简洁、直接、少废话的工具。",
+  "tags": ["Concise Writing", "CLI", "Local Skill"],
   "frameworks": ["Python", "CLI", "Skill"],
-  "githubUrl": "https://github.com/adfoke/cleanuagent"
+  "githubUrl": "https://github.com/adfoke/talkless"
 }
 ```
 

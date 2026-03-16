@@ -1,9 +1,9 @@
 [
   {
-    "name": "cleanuagent",
-    "description": "给 agent 输出降噪的工具。",
-    "tags": ["Text Cleaning", "Content Noise Reduction", "Remote Blacklist", "CLI", "Local Skill", "Agent Tool"],
+    "name": "talkless",
+    "description": "让 AI 输出更简洁、直接、少废话的工具。",
+    "tags": ["Concise Writing", "Plain Language", "Prompting", "CLI", "Local Skill", "Agent Tool"],
     "frameworks": ["Python", "CLI", "Skill"],
-    "githubUrl": "https://github.com/adfoke/cleanuagent"
+    "githubUrl": "https://github.com/adfoke/talkless"
   }
 ]
