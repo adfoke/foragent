@@ -5,5 +5,12 @@
     "tags": ["Concise Writing", "Plain Language", "Prompting", "CLI", "Local Skill", "Agent Tool"],
     "frameworks": ["Python", "CLI", "Skill"],
     "githubUrl": "https://github.com/adfoke/talkless"
+  },
+  {
+    "name": "wordscleaner",
+    "description": "清理文本中多余或不需要词语的工具。",
+    "tags": ["Text Cleaning", "Word Filtering", "Prompting", "CLI", "Agent Tool"],
+    "frameworks": ["Python", "CLI", "Tool"],
+    "githubUrl": "https://github.com/adfoke/wordscleaner"
   }
 ]
