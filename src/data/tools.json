@@ -15,9 +15,9 @@
   },
   {
     "name": "talkmore",
-    "description": "基于 xAI Voice Agent 的语音输入 CLI，支持实时转写、剪贴板复制和 SQLite 历史记录。",
-    "tags": ["Voice Input", "Speech-to-Text", "Realtime", "xAI", "SQLite", "CLI", "Agent Tool"],
-    "frameworks": ["Python", "CLI", "SQLite", "xAI API", "YAML"],
+    "description": "基于 xAI Voice Agent 的终端语音聊天工具，支持连续对话、暂停恢复和会话历史记录。",
+    "tags": ["Voice Chat", "Realtime", "xAI", "Audio", "SQLite", "CLI", "Agent Tool"],
+    "frameworks": ["Python", "CLI", "SQLite", "xAI API", "WebSocket", "YAML"],
     "githubUrl": "https://github.com/adfoke/talkmore"
   }
 ]
