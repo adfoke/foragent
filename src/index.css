@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
+@plugin "daisyui" {
+  themes: light --default;
+}
 
 :root {
+  color-scheme: light;
   color: #09090b;
   background:
     linear-gradient(rgba(24, 24, 27, 0.04) 1px, transparent 1px),
@@ -25,6 +29,12 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
+  background:
+    radial-gradient(circle at top, rgba(15, 23, 42, 0.08), transparent 28%),
+    linear-gradient(rgba(24, 24, 27, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(24, 24, 27, 0.04) 1px, transparent 1px),
+    #fcfcfa;
+  background-size: auto, 24px 24px, 24px 24px, auto;
 }
 
 * {

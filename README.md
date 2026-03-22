@@ -1,13 +1,15 @@
 # ForAgent
 
-极简 landing page，用来展示 Agent Skills 和 Agent Tools。
+展示 Agent Skills 和 Agent Tools 的前端站点。
 
 ## Tech Stack
 
 - Vite
-- React
+- React 19
+- React Router
 - TypeScript
 - Tailwind CSS 4
+- daisyUI 5
 - Cloudflare Workers
 
 ## 本地开发
@@ -52,7 +54,9 @@ npm run cf:deploy
 ```text
 src/
   components/
+  config/
   data/tools.json
+  pages/
   App.tsx
   main.tsx
 ```
