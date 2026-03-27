@@ -31,14 +31,6 @@ export default function App() {
           ))}
         </Routes>
 
-        <footer className="mt-10 border-t border-base-300/80 pt-6">
-          <a
-            href="mailto:trawow@gmail.com"
-            className="text-sm text-base-content/60 transition hover:text-base-content"
-          >
-            trawow@gmail.com
-          </a>
-        </footer>
       </main>
     </div>
   );
