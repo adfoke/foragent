@@ -14,10 +14,10 @@
     "githubUrl": "https://github.com/adfoke/wordscleaner"
   },
   {
-    "name": "linux-remote-plugin",
+    "name": "linux-remote-tool",
     "description": "给 AI Agent 用的 Linux 远程操作插件，支持持久 SSH 会话、文件传输和 SQLite 审计日志。",
     "tags": ["AI Agent", "SSH", "Linux", "Remote Ops", "File Transfer", "SQLite", "CLI", "Agent Tool"],
     "frameworks": ["Python", "CLI", "SSH", "SQLite", "YAML", "Paramiko", "Pydantic"],
-    "githubUrl": "https://github.com/adfoke/linux-remote-plugin"
+    "githubUrl": "https://github.com/adfoke/linux-remote-tool"
   }
 ]
