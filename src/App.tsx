@@ -9,12 +9,11 @@ const typedTools = tools as Tool[];
 
 export default function App() {
   useEffect(() => {
-    document.documentElement.setAttribute('data-theme', 'light');
     document.documentElement.lang = 'zh-CN';
   }, []);
 
   return (
-    <div className="min-h-screen bg-base-100 text-base-content">
+    <div className="min-h-screen bg-[var(--background)] text-[var(--foreground)]">
       <Header
         toolCount={typedTools.length}
         routes={routeConfig.map(({ path, label }) => ({ path, label }))}

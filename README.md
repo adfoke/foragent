@@ -9,7 +9,7 @@
 - React Router
 - TypeScript
 - Tailwind CSS 4
-- daisyUI 5
+- HeroUI 3
 - Cloudflare Workers
 
 ## 本地开发

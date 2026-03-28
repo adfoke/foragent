@@ -1,3 +1,4 @@
+import { Chip } from '@heroui/react';
 import { ArrowUpRight, Boxes, Github, Mail } from 'lucide-react';
 import { NavLink } from 'react-router-dom';
 
@@ -11,19 +12,19 @@ type HeaderProps = {
 
 export default function Header({ toolCount, routes }: HeaderProps) {
   return (
-    <header className="sticky top-0 z-20 border-b border-base-300/70 bg-[rgba(255,255,252,0.84)] backdrop-blur-xl">
+    <header className="sticky top-0 z-20 border-b border-[color:var(--separator)] bg-[rgba(255,255,252,0.84)] backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl flex-col gap-4 px-6 py-4 sm:px-8 lg:flex-row lg:items-start lg:justify-between lg:px-10">
         <div>
           <NavLink
             to="/"
             className="inline-flex items-center gap-3 text-sm"
           >
-            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-base-300 bg-base-100 shadow-sm">
-              <Boxes className="h-4 w-4 text-base-content" />
+            <span className="flex h-10 w-10 items-center justify-center rounded-full border border-[color:var(--separator)] bg-[var(--surface)] shadow-[var(--surface-shadow)]">
+              <Boxes className="h-4 w-4 text-[var(--foreground)]" />
             </span>
             <span>
-              <span className="block font-medium tracking-[-0.03em] text-base-content">ForAgent.cc</span>
-              <span className="block text-xs text-base-content/55">Agent tools</span>
+              <span className="block font-medium tracking-[-0.03em] text-[var(--foreground)]">ForAgent.cc</span>
+              <span className="block text-xs text-[var(--muted)]">Agent tools</span>
             </span>
           </NavLink>
         </div>
@@ -37,8 +38,8 @@ export default function Header({ toolCount, routes }: HeaderProps) {
                   to={route.path}
                   end={route.path === '/'}
                   className={({ isActive }) =>
-                    `btn btn-sm border-base-300 bg-base-100/80 shadow-none ${
-                      isActive ? 'text-base-content' : 'text-base-content/60'
+                    `inline-flex h-9 items-center rounded-full border border-[color:var(--separator)] bg-[var(--surface)] px-4 text-sm transition hover:bg-[var(--default)] ${
+                      isActive ? 'text-[var(--foreground)]' : 'text-[var(--muted)]'
                     }`
                   }
                 >
@@ -47,9 +48,14 @@ export default function Header({ toolCount, routes }: HeaderProps) {
               ))}
             </nav>
 
-            <span className="badge badge-lg border-base-300 bg-base-100/80 text-base-content/65">
+            <Chip
+              size="md"
+              variant="secondary"
+              color="default"
+              className="h-9"
+            >
               {toolCount} tools
-            </span>
+            </Chip>
           </div>
 
           <div className="flex flex-wrap gap-2 lg:justify-end">
@@ -57,9 +63,9 @@ export default function Header({ toolCount, routes }: HeaderProps) {
               href="https://x.com/JohnCui2046"
               target="_blank"
               rel="noreferrer"
-              className="btn h-11 border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:border-base-content/20 hover:bg-base-200"
+              className="inline-flex h-11 items-center gap-2 rounded-full border border-[color:var(--separator)] bg-[var(--surface)] px-4 text-sm font-semibold text-[var(--foreground)] shadow-[var(--surface-shadow)] transition hover:bg-[var(--default)]"
             >
-              <span className="inline-flex h-6 min-w-6 items-center justify-center rounded-md border border-base-300 bg-base-100 text-xs font-bold text-base-content">
+              <span className="inline-flex h-6 min-w-6 items-center justify-center rounded-md border border-[color:var(--separator)] bg-[var(--surface)] text-xs font-bold text-[var(--foreground)]">
                 X
               </span>
               X
@@ -69,7 +75,7 @@ export default function Header({ toolCount, routes }: HeaderProps) {
               href="https://github.com/adfoke"
               target="_blank"
               rel="noreferrer"
-              className="btn h-11 border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:border-base-content/20 hover:bg-base-200"
+              className="inline-flex h-11 items-center gap-2 rounded-full border border-[color:var(--separator)] bg-[var(--surface)] px-4 text-sm font-semibold text-[var(--foreground)] shadow-[var(--surface-shadow)] transition hover:bg-[var(--default)]"
             >
               <Github className="h-4 w-4" />
               GitHub
@@ -77,7 +83,7 @@ export default function Header({ toolCount, routes }: HeaderProps) {
             </a>
             <a
               href="mailto:trawow@gmail.com"
-              className="btn h-11 border-base-300 bg-base-100 px-4 text-sm font-semibold text-base-content shadow-none hover:border-base-content/20 hover:bg-base-200"
+              className="inline-flex h-11 items-center gap-2 rounded-full border border-[color:var(--separator)] bg-[var(--surface)] px-4 text-sm font-semibold text-[var(--foreground)] shadow-[var(--surface-shadow)] transition hover:bg-[var(--default)]"
             >
               <Mail className="h-4 w-4" />
               Email

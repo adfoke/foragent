@@ -1,3 +1,4 @@
+import { Button, Card, Chip, Input } from '@heroui/react';
 import { useDeferredValue, useMemo, useState } from 'react';
 import { Search } from 'lucide-react';
 import ToolCard from '../components/ToolCard';
@@ -38,40 +39,48 @@ export default function ToolsPage() {
 
   return (
     <>
-      <section className="border-b border-base-300/80 pb-10">
-        <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-base-content/55">
+      <section className="border-b border-[color:var(--separator)] pb-10">
+        <p className="text-[11px] font-medium uppercase tracking-[0.28em] text-[var(--muted)]">
           ForAgent.cc
         </p>
-        <h1 className="mt-4 max-w-4xl text-5xl font-medium tracking-[-0.06em] text-balance text-base-content sm:text-6xl lg:text-7xl">
+        <h1 className="mt-4 max-w-4xl text-5xl font-medium tracking-[-0.06em] text-balance text-[var(--foreground)] sm:text-6xl lg:text-7xl">
           Agent Skills & Agent Tools
         </h1>
         <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <label className="input input-lg flex w-full max-w-2xl items-center gap-3 border-base-300 bg-base-100/90 shadow-sm">
-            <Search className="h-4 w-4 text-base-content/40" />
-            <input
+          <div className="relative w-full max-w-2xl">
+            <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-[var(--muted)]" />
+            <Input
               value={query}
               onChange={(event) => setQuery(event.target.value)}
-              className="grow bg-transparent text-sm"
+              aria-label="搜索工具、标签或框架"
               placeholder="搜索工具、标签或框架"
+              fullWidth
+              variant="secondary"
+              className="h-14 rounded-full border border-[color:var(--separator)] bg-[var(--surface)] pl-11 pr-4 text-sm text-[var(--foreground)] shadow-[var(--field-shadow)] outline-none transition placeholder:text-[var(--muted)]"
             />
-          </label>
+          </div>
 
-          <p className="shrink-0 text-sm text-base-content/55">
+          <Chip
+            size="md"
+            variant="secondary"
+            color="default"
+            className="shrink-0"
+          >
             {filteredTools.length} / {typedTools.length}
-          </p>
+          </Chip>
         </div>
 
         {quickTags.length > 0 ? (
           <div className="mt-4 flex flex-wrap gap-2">
             {quickTags.map((tag) => (
-              <button
+              <Button
                 key={tag}
-                type="button"
-                onClick={() => setQuery(tag)}
-                className="btn btn-sm border-base-300 bg-base-100/85 text-base-content/70 shadow-none hover:border-base-content/20 hover:bg-base-200"
+                size="sm"
+                variant="secondary"
+                onPress={() => setQuery(tag)}
               >
                 {tag}
-              </button>
+              </Button>
             ))}
           </div>
         ) : null}
@@ -81,7 +90,7 @@ export default function ToolsPage() {
         id="tools"
         className="pt-8"
       >
-        <div className="overflow-hidden rounded-[28px] border border-base-300/80 bg-base-100/85 shadow-sm">
+        <Card className="overflow-hidden rounded-[28px] border border-[color:var(--separator)] bg-[var(--surface)]">
           {filteredTools.map((tool, index) => (
             <ToolCard
               key={tool.name}
@@ -89,12 +98,12 @@ export default function ToolsPage() {
               index={index}
             />
           ))}
-        </div>
+        </Card>
 
         {filteredTools.length === 0 ? (
-          <div className="mt-6 rounded-[28px] border border-dashed border-base-300 px-6 py-16 text-center text-sm text-base-content/55">
+          <Card className="mt-6 rounded-[28px] border border-dashed border-[color:var(--separator)] bg-transparent px-6 py-16 text-center text-sm text-[var(--muted)] shadow-none">
             没有结果
-          </div>
+          </Card>
         ) : null}
       </section>
     </>
